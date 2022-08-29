@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_ayaat.xml" value="0.1" />
-        <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_search.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_searchayaat.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_surat.xml" value="0.1" />
+        <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_urdutranslation.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/layout/header_main.xml" value="0.40875912408759124" />
         <entry key="..\:/Users/SSC/AndroidStudioProjects/MyQuran/app/src/main/res/menu/main_menu.xml" value="0.175" />
       </map>

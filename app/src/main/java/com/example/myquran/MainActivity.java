@@ -10,7 +10,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toolbar;
 
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
     ListView l ;
+    Button b;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -42,11 +45,16 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer);
         DBHelper dbHelper = new DBHelper(MainActivity.this);
         dbHelper.addStudent();
+        b = findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
+                startActivity(intent);
+            }
+        });
 
-        l =  findViewById(R.id.l);
-        ArrayList<String> a =  dbHelper.getAyaat();
-        ArrayAdapter<String> aa =  new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1,a);
-        l.setAdapter(aa);
+
 
         navigationView = findViewById(R.id.navigationView);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.menu_Open,R.string.close_menu);

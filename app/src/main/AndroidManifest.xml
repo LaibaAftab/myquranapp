@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyQuran">
         <activity
+            android:name=".urdutranslation"
+            android:exported="false" />
+        <activity
             android:name=".searchayaat"
             android:exported="false" />
         <activity
