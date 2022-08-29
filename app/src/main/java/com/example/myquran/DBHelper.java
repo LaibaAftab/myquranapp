@@ -62,7 +62,10 @@ public class DBHelper extends SQLiteOpenHelper {
         if (cursorCourses.moveToFirst()) {
             do {
 
-                n.add(cursorCourses.getString(3));
+                String s = cursorCourses.getString(3);
+                String t = cursorCourses.getString(4);
+                String line = s+"\n"+t;
+                n.add(line);
             } while (cursorCourses.moveToNext());
 
         }
