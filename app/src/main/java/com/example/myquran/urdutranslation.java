@@ -24,7 +24,7 @@ public class urdutranslation extends AppCompatActivity {
         l =  findViewById(R.id.l);
 //        DBHelper dbHelper=new DBHelper(urdutranslation.this);
 //        ArrayList<String> a =  dbHelper.getAyaat();
-        ArrayAdapter<String> aa =  new ArrayAdapter<>(urdutranslation.this, android.R.layout.simple_list_item_1,urdusur);
+        ArrayAdapter<String> aa =  new ArrayAdapter<>(urdutranslation.this,R.layout.urdutext,urdusur);
         l.setAdapter(aa);
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -69,9 +69,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 String line ="\n"+ s+"\n\n"+t+"\n\n"+ u + "\n";
                 n.add(line);
             } while (cursorCourses.moveToNext());
-
         }
-
         cursorCourses.close();
         return  n;
     }
