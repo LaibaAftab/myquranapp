@@ -74,5 +74,28 @@ public class DBHelper extends SQLiteOpenHelper {
         return  n;
     }
 
+    public ArrayList<Modelclass> getAyaat()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT * FROM tayah" , null);
+        //Cursor cursorCourses = db.rawQuery("SELECT * FROM tayah", null);
+        ArrayList<Modelclass> n = new ArrayList<>();
+
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+//                String s = cursorCourses.getString(3);
+//                String t = cursorCourses.getString(index);
+//                //String u = cursorCourses.getString(6);
+//                String line ="\n"+ s+"\n"+t;
+                n.add(new Modelclass(cursorCourses.getInt(2),cursorCourses.getString(3),cursorCourses.getString(4)));
+            } while (cursorCourses.moveToNext());
+        }
+        cursorCourses.close();
+        return  n;
+    }
+
 
 }

@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent recycler = new Intent(MainActivity.this,recycler.class);
+                startActivity(recycler);
             }
         });
         b.setOnClickListener(new View.OnClickListener() {
