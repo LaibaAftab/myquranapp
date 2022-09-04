@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
     ListView l ;
-    Button b;
+    Button b,b2,b3,b4,recycler;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -44,12 +44,50 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.drawer);
         DBHelper dbHelper = new DBHelper(MainActivity.this);
-        dbHelper.addStudent();
+
         b = findViewById(R.id.button);
+        b2=findViewById(R.id.button2);
+        b3=findViewById(R.id.button3);
+        b4=findViewById(R.id.button4);
+        recycler = findViewById(R.id.button6);
+        recycler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recycler = new Intent(MainActivity.this,recycler.class);
+            }
+        });
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,urdutranslation.class);
+                intent.putExtra("index",4);
+                startActivity(intent);
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
+                intent.putExtra("index",5);
+                startActivity(intent);
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
+                intent.putExtra("index",6);
+                startActivity(intent);
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
+                intent.putExtra("index",7);
                 startActivity(intent);
             }
         });

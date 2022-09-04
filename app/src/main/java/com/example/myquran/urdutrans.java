@@ -22,8 +22,9 @@ public class urdutrans extends AppCompatActivity {
         listView = findViewById(R.id.urdutrans);
         Intent intent = getIntent();
         int position = intent.getIntExtra("surat",0);
+        int index = intent.getIntExtra("index",0);
         DBHelper dbHelper = new DBHelper(urdutrans.this);
-        ArrayList<String> urdu = dbHelper.getAyaat(position+1);
+        ArrayList<String> urdu = dbHelper.getAyaat(position+1,index);
        // ArrayAdapter<String> a = new ArrayAdapter<>(urdutrans.this, android.R.layout.simple_list_item_1,urdu);
        ArrayAdapter<String> a=new ArrayAdapter<>(getApplicationContext(),R.layout.urdutext,urdu);
         listView.setAdapter(a);

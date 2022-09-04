@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/black">
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="@font/noorehuda"
+        android:gravity="right"
+        android:paddingRight="200dp"
+        android:text="1"
+        android:textColor="#7C7474"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/arofrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/noorehuda"
+        android:gravity="center"
+        android:text="hello"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/urofrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/noorehuda"
+        android:gravity="center"
+        android:text="hello"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+</RelativeLayout>

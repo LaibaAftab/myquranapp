@@ -19,18 +19,22 @@ public class urdutranslation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_urdutranslation);
         Intent i = getIntent();
+        l =  findViewById(R.id.l);
+        int  index = i.getIntExtra("index",0);
+//        DBHelper db = new DBHelper(urdutranslation.this);
+//        ArrayList<String> a =  db.getAyaat(index);
+//        ArrayAdapter<String> aa =  new ArrayAdapter<>(urdutranslation.this,R.layout.urdutext,a);
+//        l.setAdapter(aa);
         suratName urdusurat = new suratName();
         String[] urdusur = urdusurat.urduSurahNames;
-        l =  findViewById(R.id.l);
-//        DBHelper dbHelper=new DBHelper(urdutranslation.this);
-//        ArrayList<String> a =  dbHelper.getAyaat();
-        ArrayAdapter<String> aa =  new ArrayAdapter<>(urdutranslation.this,R.layout.urdutext,urdusur);
+        ArrayAdapter<String> aa =  new ArrayAdapter<>(urdutranslation.this,R.layout.urdutext3,urdusur);
         l.setAdapter(aa);
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(urdutranslation.this,urdutrans.class);
                 intent.putExtra("surat",position);
+                intent.putExtra("index",index);
                 startActivity(intent);
             }
         });

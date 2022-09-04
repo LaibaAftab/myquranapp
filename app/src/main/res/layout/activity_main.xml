@@ -5,22 +5,121 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/drawer">
+    android:id="@+id/drawer"
+    android:background="@color/cardview_dark_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black"
         android:clipToPadding="true">
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="213dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="36dp"
+            android:foregroundTint="@color/cardview_dark_background"
+            android:text="Mehmoodul Hassan"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
+            android:theme="@style/Base.CardView"
+            app:layout_constraintBottom_toTopOf="@+id/button4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="191dp"
-            android:layout_height="65dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="55dp"
             android:layout_marginTop="214dp"
-            android:text="translation"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="36dp"
+            android:foregroundTint="@color/cardview_dark_background"
+            android:text="Muhammad Jalandhri"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
+            android:theme="@style/Base.CardView"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="185dp"
+            android:foregroundTint="@color/cardview_dark_background"
+            android:text="Dr Mohsin Khan"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
+            android:theme="@style/Base.CardView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginBottom="182dp"
+            android:foregroundTint="@color/cardview_dark_background"
+            android:text="Mufti Taqi Usmani"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
+            android:theme="@style/Base.CardView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/main" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="330dp"
+            android:layout_height="61dp"
+            android:layout_marginBottom="72dp"
+            android:text="Go to"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.641"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
    <com.google.android.material.navigation.NavigationView
@@ -30,5 +129,7 @@
        app:headerLayout="@layout/header_main"
        app:menu="@menu/main_menu"
        android:fitsSystemWindows="true"
+       android:background="@color/cardview_dark_background"
        android:layout_gravity="start"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

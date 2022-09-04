@@ -51,22 +51,22 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public ArrayList<String> getAyaat(int i)
+    public ArrayList<String> getAyaat(int i,int index)
     {
         SQLiteDatabase db = this.getReadableDatabase();
 
 
         Cursor cursorCourses = db.rawQuery("SELECT * FROM tayah where SuraID ="+i , null);
-
+        //Cursor cursorCourses = db.rawQuery("SELECT * FROM tayah", null);
         ArrayList<String> n = new ArrayList<>();
 
         if (cursorCourses.moveToFirst()) {
             do {
 
                 String s = cursorCourses.getString(3);
-                String t = cursorCourses.getString(4);
-                String u = cursorCourses.getString(6);
-                String line ="\n"+ s+"\n\n"+t+"\n\n"+ u + "\n";
+                String t = cursorCourses.getString(index);
+                //String u = cursorCourses.getString(6);
+                String line ="\n"+ s+"\n"+t;
                 n.add(line);
             } while (cursorCourses.moveToNext());
         }
