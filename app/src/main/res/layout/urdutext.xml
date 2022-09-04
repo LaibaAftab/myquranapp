@@ -10,5 +10,6 @@
     android:layout_height="match_parent"
     android:fontFamily="@font/noorehuda"
     android:textAlignment="center"
-    android:padding="15dp"/>
+    android:padding="15dp"
+    />
 

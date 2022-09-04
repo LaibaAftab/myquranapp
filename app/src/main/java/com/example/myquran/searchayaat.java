@@ -54,7 +54,7 @@ public class searchayaat extends AppCompatActivity {
             ayyats.add(ayaat.QuranArabicText[j]);
         }
 
-        ArrayAdapter<String> a = new ArrayAdapter<>(searchayaat.this,android.R.layout.simple_list_item_1,ayyats);
+        ArrayAdapter<String> a = new ArrayAdapter<>(searchayaat.this,R.layout.urdutext,ayyats);
         listView.setAdapter(a);
     }
 }

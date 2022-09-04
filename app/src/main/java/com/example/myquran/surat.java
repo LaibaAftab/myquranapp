@@ -43,10 +43,10 @@ public class surat extends AppCompatActivity {
 
         listview = findViewById(R.id.suratname);
         suratName sn = new suratName();
-        String[] listSn = sn.englishSurahNames;
+        String[] listSn = sn.urduSurahNames;
         int[] suratindex = sn.SSP;
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter<String>(surat.this, android.R.layout.simple_list_item_1,listSn);
+        ArrayAdapter arrayAdapter = new ArrayAdapter<String>(surat.this,R.layout.urdutext3,listSn);
         listview.setAdapter(arrayAdapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
