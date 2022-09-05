@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer);
         DBHelper dbHelper = new DBHelper(MainActivity.this);
 
-        b = findViewById(R.id.button);
+        //b = findViewById(R.id.button);
         b2=findViewById(R.id.button2);
         b3=findViewById(R.id.button3);
         b4=findViewById(R.id.button4);
