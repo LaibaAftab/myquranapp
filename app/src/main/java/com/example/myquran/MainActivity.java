@@ -3,22 +3,16 @@ package com.example.myquran;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
     ListView l ;
-    Button b,b2,b3,b4,recycler;
+    Button b,recycler;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -46,10 +40,8 @@ public class MainActivity extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(MainActivity.this);
 
         b = findViewById(R.id.button);
-        b2=findViewById(R.id.button2);
-        b3=findViewById(R.id.button3);
-        b4=findViewById(R.id.button4);
-        recycler = findViewById(R.id.button6);
+        recycler=findViewById(R.id.button6);
+
         recycler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,35 +52,7 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
-                intent.putExtra("index",4);
-                startActivity(intent);
-            }
-        });
-
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
-                intent.putExtra("index",5);
-                startActivity(intent);
-            }
-        });
-
-        b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
-                intent.putExtra("index",6);
-                startActivity(intent);
-            }
-        });
-
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,urdutranslation.class);
-                intent.putExtra("index",7);
+                Intent intent = new Intent(MainActivity.this,surah.class);
                 startActivity(intent);
             }
         });

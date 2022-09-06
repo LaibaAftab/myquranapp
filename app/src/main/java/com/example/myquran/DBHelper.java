@@ -97,5 +97,74 @@ public class DBHelper extends SQLiteOpenHelper {
         return  n;
     }
 
+    public ArrayList<Modelclass> getAyaat(int i)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT * FROM tayah" , null);
+        //Cursor cursorCourses = db.rawQuery("SELECT * FROM tayah", null);
+        ArrayList<Modelclass> n = new ArrayList<>();
+
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+//                String s = cursorCourses.getString(3);
+//                String t = cursorCourses.getString(index);
+//                //String u = cursorCourses.getString(6);
+//                String line ="\n"+ s+"\n"+t;
+                n.add(new Modelclass(cursorCourses.getInt(2),cursorCourses.getString(3),cursorCourses.getString(i)));
+            } while (cursorCourses.moveToNext());
+        }
+        cursorCourses.close();
+        return  n;
+    }
+
+    public ArrayList<modelsurah> getsurah()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from tsurah",null);
+        ArrayList<modelsurah> m = new ArrayList<>();
+        if (cursor.moveToNext())
+        {
+            do{
+                m.add(new modelsurah(cursor.getString(2),cursor.getString(4)));
+            }while(cursor.moveToNext());
+        }
+        cursor.close();
+        return m;
+    }
+
+    public int getSURAHID(String s)
+    {
+        SQLiteDatabase DB = getReadableDatabase();
+        int i = -1;
+        Cursor cursor = DB.rawQuery("Select * from tsurah where SurahNameE ='"+s+"'",null);
+        if(cursor.moveToNext())
+        {
+
+                i = cursor.getInt(0);
+
+        }
+        return i;
+    }
+
+    public ArrayList<Modelclass> getAyaa(int i,int index)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT * FROM tayah where SuraID ="+i , null);
+        ArrayList<Modelclass> n = new ArrayList<>();
+
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+                n.add(new Modelclass(cursorCourses.getInt(2),cursorCourses.getString(3),cursorCourses.getString(index)));
+            } while (cursorCourses.moveToNext());
+        }
+        cursorCourses.close();
+        return  n;
+    }
 
 }

@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyQuran">
         <activity
+            android:name=".surah"
+            android:exported="false" />
+        <activity
+            android:name=".translation"
+            android:exported="false" />
+        <activity
             android:name=".recycler"
-            android:exported="false" />
-        <activity
-            android:name=".urdutrans"
-            android:exported="false" />
-        <activity
-            android:name=".urdutranslation"
             android:exported="false" />
         <activity
             android:name=".searchayaat"

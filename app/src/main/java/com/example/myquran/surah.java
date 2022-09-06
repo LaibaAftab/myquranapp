@@ -1,6 +1,5 @@
 package com.example.myquran;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,25 +9,26 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class recycler extends AppCompatActivity {
+public class surah extends AppCompatActivity {
 
     RecyclerView recyclerView;
     LinearLayoutManager linearLayoutManager;
-    List<Modelclass>ayaatlist;
-    Adapter adapter;
+    List<modelsurah> modelclassList;
+    surahAdapter surahAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycler);
-
-        ayaatlist = new ArrayList<>();
-        DBHelper db =  new DBHelper(this);
-        ayaatlist= db.getAyaat();
-        recyclerView= findViewById(R.id.recyclerview);
+        setContentView(R.layout.activity_surah);
+        recyclerView = findViewById(R.id.recyclerView);
+        modelclassList = new ArrayList<>();
+        DBHelper db = new DBHelper(this);
+        modelclassList = db.getsurah();
         linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
+        linearLayoutManager.setOrientation(recyclerView.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        adapter = new Adapter(ayaatlist);
-        recyclerView.setAdapter(adapter);
+        surahAdapter = new surahAdapter(modelclassList);
+        recyclerView.setAdapter(surahAdapter);
+
     }
 }

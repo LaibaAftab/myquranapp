@@ -1,5 +1,6 @@
 package com.example.myquran;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return ayatList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        // implements View.OnClickListener
 
         private TextView number;
         private TextView arabic;
@@ -55,7 +57,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             number =itemView.findViewById(R.id.number);
             arabic = itemView.findViewById(R.id.arofrecycler);
             trans = itemView.findViewById(R.id.urofrecycler);
+//            number.setOnClickListener(this);
         }
+//        @Override
+//        public void onClick(View view)
+//        {
+//
+//        }
 
         public void setData(int n,String ar,String ur)
         {

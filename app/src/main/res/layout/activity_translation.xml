@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".translation">
+
+    <FrameLayout
+        android:id="@+id/recyclertrans"
+        android:layout_width="match_parent"
+        android:layout_height="562dp"
+        android:layout_marginTop="70dp" />
+
+    <Button
+        android:id="@+id/trans1"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="0dp"
+        android:background="@color/black"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/trans2"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/black"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/trans4"
+        android:layout_width="95dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="175dp"
+        android:background="@color/black"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/trans5"
+        android:layout_width="95dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="270dp"
+        android:background="@color/black"
+        android:text="4" />
+
+
+
+</RelativeLayout>
